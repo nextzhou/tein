@@ -5,6 +5,7 @@ use std::io::{self, Stdin, Read, BufRead, BufReader};
 use std::str::FromStr;
 use std::marker::PhantomData;
 use std::iter::Iterator;
+use std::convert::From;
 
 /// Tiny and easy inputer
 pub struct Tein<R: Read> {
@@ -62,6 +63,12 @@ impl<T, R> Input<T, R> for Tein<R>
             tein: self,
             _type: PhantomData,
         }
+    }
+}
+
+impl<R: Read> From<R> for Tein<R> {
+    fn from(reader: R) -> Self {
+        Tein::new(reader)
     }
 }
 
