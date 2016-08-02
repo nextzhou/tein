@@ -1,5 +1,7 @@
 # *Tein* - Tiny & Easy Inputer for [Rust](http://www.rust-lang.org)
 
+[![Build Status](https://travis-ci.org/nextzhou/tein.svg?branch=master)](https://travis-ci.org/nextzhou/tein)
+
 A simple wrapping of inputting part of Rust standard library.
 
 ## Usage
